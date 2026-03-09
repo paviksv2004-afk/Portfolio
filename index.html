@@ -119,7 +119,7 @@
         </div>
     </section>
 
-    <!-- Work Section (Case Studies) - FIXED: Clickable cards, full images -->
+    <!-- Work Section (Case Studies) - Clickable cards, full images -->
     <section id="work" class="work">
         <div class="container">
             <h2 class="section-title">Featured Work</h2>
@@ -234,7 +234,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - UPDATED with Netlify Form -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
@@ -258,10 +258,17 @@
                         <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                
+                <!-- Netlify Form - இதுதான் main change -->
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+                    <!-- Honeypot field - Spam prevention (hidden) -->
+                    <p class="hidden" style="display: none;">
+                        <label>Don't fill this: <input name="bot-field" /></label>
+                    </p>
+                    
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
