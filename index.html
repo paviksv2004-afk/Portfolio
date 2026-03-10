@@ -234,7 +234,7 @@
         </div>
     </section>
 
-    <!-- Contact Section - UPDATED with Netlify Form -->
+    <!-- Contact Section - FIXED Netlify Form -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
@@ -259,12 +259,10 @@
                     </div>
                 </div>
                 
-                <!-- Netlify Form - இதுதான் main change -->
+                <!-- FIXED NETLIFY FORM - Honeypot simplified -->
                 <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-                    <!-- Honeypot field - Spam prevention (hidden) -->
-                    <p class="hidden" style="display: none;">
-                        <label>Don't fill this: <input name="bot-field" /></label>
-                    </p>
+                    <!-- Honeypot field - Spam prevention - Simplified -->
+                    <input type="hidden" name="bot-field" />
                     
                     <input type="text" name="name" placeholder="Your Name" required>
                     <input type="email" name="email" placeholder="Your Email" required>
